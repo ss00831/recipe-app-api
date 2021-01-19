@@ -17,7 +17,6 @@ class UserManager(BaseUserManager):
 
         return user
 
-
     def create_superuser(self, email, password):
         """Creates and saves a new super user"""
         user = self.create_user(email, password)
@@ -62,6 +61,7 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Recipe(models.Model):
     """Recipe object"""
